@@ -46,11 +46,6 @@
 
 ---
 
-## ✨ Preview
-
-![Preview Screenshot](#) *(Add a screenshot if available)*
-
----
 
 ## 👨‍🍳 About
 

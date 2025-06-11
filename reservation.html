@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Reservation | Foodie's Paradise</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    body {
+
+      margin: 0;
+
+      font-family: 'Rubik', sans-serif;
+
+      background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+
+      color: #333;
+
+    }
+
+
+
+    header {
+
+      background-color: #ff6347;
+
+      padding: 1.5rem;
+
+      text-align: center;
+
+      color: white;
+
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+
+    .hero {
+
+      background: url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+
+      padding: 5rem 2rem;
+
+      color: white;
+
+      text-align: center;
+
+      background-attachment: fixed;
+
+    }
+
+
+
+    .hero h1 {
+
+      font-size: 3rem;
+
+      margin: 0;
+
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+    }
+
+
+
+    .hero p {
+
+      font-size: 1.2rem;
+
+      margin-top: 0.5rem;
+
+    }
+
+
+
+    .container {
+
+      max-width: 700px;
+
+      margin: -3rem auto 3rem;
+
+      background: rgba(255, 255, 255, 0.85);
+
+      padding: 2rem 2.5rem;
+
+      border-radius: 16px;
+
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+      backdrop-filter: blur(10px);
+
+    }
+
+
+
+    form label {
+
+      display: block;
+
+      margin-top: 1rem;
+
+      font-weight: 600;
+
+    }
+
+
+
+    form input, form select {
+
+      width: 100%;
+
+      padding: 0.7rem;
+
+      margin-top: 0.4rem;
+
+      border-radius: 8px;
+
+      border: 1px solid #ccc;
+
+      font-size: 1rem;
+
+      transition: 0.3s;
+
+    }
+
+
+
+    form input:focus, form select:focus {
+
+      border-color: #ff6347;
+
+      outline: none;
+
+    }
+
+
+
+    .icon-label {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 0.5rem;
+
+      margin-top: 1rem;
+
+      font-weight: 600;
+
+    }
+
+
+
+    button {
+
+      margin-top: 2rem;
+
+      background: linear-gradient(135deg, #ff6347, #f857a6);
+
+      color: white;
+
+      border: none;
+
+      padding: 0.8rem 1.5rem;
+
+      font-size: 1.1rem;
+
+      border-radius: 10px;
+
+      cursor: pointer;
+
+      width: 100%;
+
+      transition: 0.3s;
+
+    }
+
+
+
+    button:hover {
+
+      opacity: 0.9;
+
+    }
+
+
+
+    footer {
+
+      text-align: center;
+
+      padding: 1rem;
+
+      background-color: #333;
+
+      color: white;
+
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+
+      .hero h1 {
+
+        font-size: 2.2rem;
+
+      }
+
+
+
+      .container {
+
+        margin: 2rem 1rem;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+<header>
+
+  <h1>Reserve Your Table</h1>
+
+</header>
+
+
+
+<section class="hero">
+
+  <h1>Book Your Experience</h1>
+
+  <p>Fine dining, cozy ambiance — pick your time & table</p>
+
+</section>
+
+
+
+<section class="container">
+
+  <form id="reservationForm">
+
+    <label class="icon-label" for="name"><i class="fas fa-user"></i> Full Name</label>
+
+    <input type="text" id="name" required>
+
+
+
+    <label class="icon-label" for="email"><i class="fas fa-envelope"></i> Email</label>
+
+    <input type="email" id="email" required>
+
+
+
+    <label class="icon-label" for="guests"><i class="fas fa-users"></i> Number of Guests</label>
+
+    <input type="number" id="guests" min="1" max="20" required>
+
+
+
+    <label class="icon-label" for="date"><i class="fas fa-calendar-alt"></i> Date</label>
+
+    <input type="date" id="date" required>
+
+
+
+    <label class="icon-label" for="time"><i class="fas fa-clock"></i> Time Slot</label>
+
+    <select id="time">
+
+      <option value="morning">Morning (8 AM - 11 AM)</option>
+
+      <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+
+      <option value="evening">Evening (6 PM - 10 PM)</option>
+
+    </select>
+
+
+
+    <label class="icon-label" for="table"><i class="fas fa-chair"></i> Table Preference</label>
+
+    <select id="table">
+
+      <option value="indoor">Indoor</option>
+
+      <option value="outdoor">Outdoor</option>
+
+      <option value="private">Private Room</option>
+
+    </select>
+
+
+
+    <button type="submit"><i class="fas fa-check-circle"></i> Confirm Reservation</button>
+
+  </form>
+
+</section>
+
+
+
+<footer>
+
+  <p>&copy; 2025 Foodie's Paradise | Bookings: +91-8333954634</p>
+
+</footer>
+
+
+
+<script>
+
+  document.getElementById('reservationForm').addEventListener('submit', function(e) {
+
+    e.preventDefault();
+
+
+
+    const name = document.getElementById('name').value;
+
+    const guests = document.getElementById('guests').value;
+
+    const date = document.getElementById('date').value;
+
+    const time = document.getElementById('time').value;
+
+    const table = document.getElementById('table').value;
+
+
+
+    alert(`Thank you, ${name}! Your table for ${guests} guest(s) on ${date} (${time}, ${table}) has been reserved.`);
+
+  });
+
+</script>
+
+
+
+</body>
+
+</html>

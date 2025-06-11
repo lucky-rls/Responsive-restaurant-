@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>About Us | Foodie's Paradise</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    body {
+
+      font-family: 'Rubik', sans-serif;
+
+      margin: 0;
+
+      padding: 0;
+
+      background-color: #fffdf5;
+
+      color: #333;
+
+      line-height: 1.6;
+
+    }
+
+
+
+    header {
+
+      background-color: #ff6347;
+
+      color: white;
+
+      padding: 1.5rem;
+
+      text-align: center;
+
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    }
+
+
+
+    .hero {
+
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+
+      height: 380px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      color: white;
+
+      position: relative;
+
+    }
+
+
+
+    .hero h1 {
+
+      font-size: 3.2rem;
+
+      background: rgba(0, 0, 0, 0.6);
+
+      padding: 1.2rem 2.2rem;
+
+      border-radius: 12px;
+
+      animation: fadeIn 2s ease-in-out;
+
+    }
+
+
+
+    @keyframes fadeIn {
+
+      0% { opacity: 0; transform: translateY(-20px); }
+
+      100% { opacity: 1; transform: translateY(0); }
+
+    }
+
+
+
+    .about-section {
+
+      padding: 3rem 2rem;
+
+      max-width: 1100px;
+
+      margin: auto;
+
+    }
+
+
+
+    .about-section h2 {
+
+      font-size: 2rem;
+
+      margin-bottom: 1rem;
+
+      color: #ff6347;
+
+    }
+
+
+
+    .about-section p {
+
+      font-size: 1.1rem;
+
+      margin-bottom: 1.5rem;
+
+    }
+
+
+
+    .about-image {
+
+      width: 100%;
+
+      height: 320px;
+
+      background: url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+
+      border-radius: 10px;
+
+      margin: 2rem 0;
+
+    }
+
+
+
+    .chef-section {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      align-items: center;
+
+      gap: 2rem;
+
+      margin-top: 3rem;
+
+    }
+
+
+
+    .chef-section img {
+
+      width: 100%;
+
+      max-width: 300px;
+
+      border-radius: 15px;
+
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+
+    .chef-text {
+
+      flex: 1;
+
+    }
+
+
+
+    .extras {
+
+      margin-top: 3rem;
+
+    }
+
+
+
+    .highlights {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+      gap: 2rem;
+
+      margin-top: 1rem;
+
+    }
+
+
+
+    .highlight-box {
+
+      background-color: #ffece6;
+
+      padding: 1.5rem;
+
+      border-radius: 10px;
+
+      text-align: center;
+
+      transition: transform 0.3s;
+
+    }
+
+
+
+    .highlight-box:hover {
+
+      transform: translateY(-5px);
+
+    }
+
+
+
+    .highlight-box i {
+
+      font-size: 2rem;
+
+      color: #ff6347;
+
+      margin-bottom: 0.5rem;
+
+    }
+
+
+
+    footer {
+
+      background-color: #333;
+
+      color: white;
+
+      text-align: center;
+
+      padding: 1rem;
+
+      margin-top: 4rem;
+
+    }
+
+
+
+    @media (max-width: 768px) {
+
+      .hero h1 {
+
+        font-size: 2.2rem;
+
+      }
+
+
+
+      .chef-section {
+
+        flex-direction: column;
+
+        text-align: center;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+<header>
+
+  <h1>About Bhimavaram Ruchulu</h1>
+
+</header>
+
+
+
+<section class="hero">
+
+  <h1>Where Passion Meets Plate</h1>
+
+</section>
+
+
+
+<section class="about-section">
+
+  <h2>Our Story</h2>
+
+  <p>
+
+    Welcome to <strong>Bhimavaram Ruchulu</strong>, where every dish tells a story and every flavor ignites a memory. Founded in 2023, we started as a cozy kitchen serving local families — now we’re one of the most loved online food platforms, bringing gourmet meals and street-style favorites right to your doorstep.
+
+  </p>
+
+
+
+  <div class="about-image"></div>
+
+
+
+  <h2>Our Values</h2>
+
+  <p>
+
+    We believe food is more than just nourishment — it’s an emotion, a celebration, a connection. Our mission is to serve food that brings people together, prepared with love, sourced with care, and delivered with speed. From traditional home-cooked meals to creative fusions, we honor both heritage and innovation.
+
+  </p>
+
+
+
+  <div class="chef-section">
+
+    <img src="https://images.unsplash.com/photo-1516685018646-549dfb7d6441?auto=format&fit=crop&w=800&q=80" alt="Chef Image" />
+
+    <div class="chef-text">
+
+      <h2>Meet Our Head Chef</h2>
+
+      <p>
+
+        Chef Arjun Singh is the soul behind our signature recipes. With 15+ years of experience and a heart full of creativity, he blends traditional flavors with modern twists to deliver unforgettable meals every single time. His love for food is only matched by his love for our guests.
+
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="extras">
+
+    <h2>What Makes Us Special</h2>
+
+    <div class="highlights">
+
+      <div class="highlight-box">
+
+        <i class="fas fa-shipping-fast"></i>
+
+        <h3>Lightning Delivery</h3>
+
+        <p>We deliver hot & fresh meals within 30 minutes.</p>
+
+      </div>
+
+      <div class="highlight-box">
+
+        <i class="fas fa-seedling"></i>
+
+        <h3>Fresh Ingredients</h3>
+
+        <p>Locally sourced produce for real flavor & nutrition.</p>
+
+      </div>
+
+      <div class="highlight-box">
+
+        <i class="fas fa-star"></i>
+
+        <h3>Top Rated</h3>
+
+        <p>Rated 4.9/5 by thousands of happy foodies.</p>
+
+      </div>
+
+      <div class="highlight-box">
+
+        <i class="fas fa-heart"></i>
+
+        <h3>Made with Love</h3>
+
+        <p>Each dish is prepared with heart and heritage.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</section>
+
+
+
+<footer>
+
+  <p>&copy; 2025 Bhimavaram Ruchulu | Taste the Joy of Dining</p>
+
+</footer>
+
+
+
+</body>
+
+</html>

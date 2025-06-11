@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pay via UPI - Andhra Spice House</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff9f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px;
+      gap: 30px;
+    }
+
+    .container,
+    .payment-container,
+    .transaction-form {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      color: #d32f2f;
+    }
+
+    .upi-btn,
+    .copy-btn,
+    .transaction-form button {
+      background-color: #d32f2f;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .upi-btn:hover,
+    .transaction-form button:hover,
+    .copy-btn:hover {
+      background-color: #b71c1c;
+    }
+
+    img.qr {
+      width: 200px;
+      margin: 20px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .upi-id {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #444;
+    }
+
+    .transaction-form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .transaction-form input[type="text"] {
+      width: 90%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    #success-message {
+      margin-top: 20px;
+      color: #2e7d32;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 10px;
+      display: none;
+    }
+
+    #l {
+      color: #444;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    h1.thanks {
+      text-align: center;
+      color: #d32f2f;
+      font-size: 2rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Pay with UPI</h2>
+  <p>Click the button below to proceed with UPI payment:</p>
+  <a class="upi-btn"
+     href="upi://pay?pa=yourupiid@bank&pn=Your%20Name&am=100&cu=INR&tn=Payment%20for%20Services">
+    Pay ₹1000 Now
+  </a>
+</div>
+
+<div class="payment-container">
+  <h2>Pay via QR</h2>
+  <img src="images.jpeg " alt="UPI QR Code" class="qr">
+  <div class="upi-id" id="upiId">yourupiid@bank</div>
+  <button class="copy-btn" onclick="copyUPI()">Copy UPI ID</button>
+  <div class="note">
+    Scan the QR code using any UPI app (GPay, PhonePe, Paytm, etc.) or copy the UPI ID above.
+  </div>
+</div>
+
+<div class="transaction-form">
+  <label for="txnId">Enter Transaction ID:</label>
+  <input type="text" id="txnId" placeholder="e.g. TXN123456789">
+  <button onclick="submitTxn()">Submit</button>
+  <div id="success-message">Transaction submitted. We will verify shortly!</div>
+</div>
+
+<h3 id="l">
+  For payments in processing,<br>amount will be credited within 24 hours.
+</h3>
+<h1 class="thanks">THANK YOU!</h1>
+
+<script>
+  function submitTxn() {
+    const txnId = document.getElementById("txnId").value;
+    if (txnId.trim() !== "") {
+      document.getElementById("success-message").style.display = "block";
+    } else {
+      alert("Please enter a transaction ID.");
+    }
+  }
+
+  function copyUPI() {
+    const upi = document.getElementById("upiId").innerText;
+    navigator.clipboard.writeText(upi);
+    alert("UPI ID copied to clipboard!");
+  }
+</script>
+
+</body>
+</html>
